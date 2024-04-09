@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
                 nonEditableTextView.setText(String.valueOf(result));
 
-                if(!isNumeric(value1Str) && !isNumeric(value2Str)) {
+                if(!isNumeric(value1Str) && !isNumeric(value2Str) && result == 2) {
                     Intent intent = new Intent(getApplicationContext(), PracticalTest01Var03Service.class);
                     intent.putExtra(Constants.EDITTEXTFIRST, Integer.parseInt(editTextFirst.getText().toString()));
                     intent.putExtra(Constants.EDITTEXTBELLOWBUTTONS,  Integer.parseInt(editTextBelowButtons.getText().toString()));
